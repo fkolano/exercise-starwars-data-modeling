@@ -23,11 +23,11 @@ class Favorites(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('User.id'), primary_key=True)
-    planets = Column(Integer, ForeignKey('Planets.id'), primary_key=True)
-    characters = Column(Integer, ForeignKey('Characters.id'), primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
+    planets = Column(Integer, ForeignKey('planets.id'), primary_key=True)
+    characters = Column(Integer, ForeignKey('characters.id'), primary_key=True)
 
-    class Planets(Base):
+class Planets(Base):
     __tablename__ = 'planets'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
